@@ -1,39 +1,37 @@
 #!/bin/bash
 
 # We want to install my sql through shell script
+# If ID is not equal to 0 then It is a Root user
 
-ID=$(id -u) # Here id -u will give you root id number
+ID=$(id -u)
+
+R="\e[31m" # Red Colour
+G="\e[32m" # Green colour
+Y="\e[33m" # Yellow colour
+N="\e[0m" # No colour
 
 VALIDATE(){
-if [ $? -ne 0 ] #Here $? is used as Exit status
-then
-    echo " Installation of $APPLICATION is failed"
-    exit 1
-else
-    echo "Installation of $APPLICATION is successful."
-fi
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$2 $R...FAILED $N" # $R - For Red Colour, $2 is used for exit status 
+        exit 1
+    else
+        echo -e "$2 $G...SUCCESS $N" # $G - For Green Colour, $2 is used for exit status 
+    fi
 }
 
 if [ $ID -ne 0 ]
 then
     echo "ERROR: You do not have root permission to run this command"
-    exit 1 # This is the exit command status, shell script will not run if exit status is not "0".
+    exit 1 # We need to give this command to stop the process here when we receive error
 else
-    echo "You are a root user"
+    echo "You are a Root user, Proceed"
 fi
 
-echo "Please enter the Application you want to Install"
-read APPLICATION
+dnf install mysql -y # Install 
 
-if [ $APPLICATION = "mysql" ]
-then 
-    yum install mysql -y
-    VALIDATE
-fi
+VALIDATE $? "Installing MySQL"
 
-if [ $APPLICATION = "git" ]
-then 
-    yum install git -y
-    VALIDATE
-fi
+dnf install git -y
 
+VALIDATE $? "Installing GIT"
