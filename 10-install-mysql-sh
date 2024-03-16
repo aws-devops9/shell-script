@@ -11,7 +11,7 @@
 # We need to use EXIt status here to check if the command is not successful the next command should run and shell script should be stopped.
 # "$?" is the command to check the EXIT status, If it is "0" - Success, Othen than 0 --> Failed
 
-ID=$(id -u)
+ID=$(id -u) # Here id -u will give you root id number
 if [ $ID -ne 0 ]
 then
     echo "ERROR: You do not have root permission to run this command"
