@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "enter your username"
-read -s USERNAME
+read -s USERNAME # Here -s used to hide the USERNAME in the command
 echo "enter your password"
-read -s PASSWORD
+read -s PASSWORD # Here -s used to hide the PASSWORD in the command
 
-echo "your username is $USERNAME "
+echo "your username is $USERNAME"
 echo "your password will not be displayed as a security reasons"
