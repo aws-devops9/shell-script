@@ -29,8 +29,6 @@ if [ $APPLICATION = "mysql" ]
 then 
     yum install mysql -y
     VALIDATE
-else
-    echo "Please enter the Application you want to Install"
 fi
 
 if [ $APPLICATION = "git" ]
