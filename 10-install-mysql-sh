@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# We want to install my sql through shell script
+# here is the algorithm
+
+# Check if the user is having root permissions or not
+#      -> If Root, proceed, If not throw an error "echo - You do not have root permission to run this command"
+# Install mysql, If success - Guve Success message "- The Installation is successful"
+# If not throw an error "- The installation is Failed"
+
+ID=$(id -u)
+if [ $ID -ne 0 ]
+then
+    echo "ERROR: You do not have root permission to run this command"
+else
+    echo "You are root user"
+fi
