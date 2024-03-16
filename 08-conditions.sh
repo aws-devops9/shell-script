@@ -3,7 +3,7 @@
 echo "what is today?"
 read TODAY
 
-if ($TODAY !={Sunday}) {
+if [$TODAY != Sunday] {
     echo "Today is $TODAY, Go to School"
 }
 else{ 
