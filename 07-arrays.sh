@@ -9,4 +9,4 @@ echo "Second fruit is: ${FRUITS[1]}"
 
 echo "Third fruit is: ${FRUITS[2]}"
 
-echo "All fruits: ${FRUITS[@]}"
+echo "All fruits: ${FRUITS[@]}" # [@] --> is used as all in the array
