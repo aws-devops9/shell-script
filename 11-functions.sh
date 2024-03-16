@@ -35,7 +35,5 @@ if [ $APPLICATION = "git" ]
 then 
     yum install git -y
     VALIDATE
-else 
-    echo "Please enter the Application you want to Install"
 fi
 
