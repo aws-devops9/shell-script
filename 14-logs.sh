@@ -3,7 +3,7 @@
 ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOG="/tmp/$0-$TIMESTAMP.log"
+LOGS="/tmp/$0-$TIMESTAMP.log"
 
 R="\e[31m" # Red Colour
 G="\e[32m" # Green colour
@@ -34,12 +34,12 @@ read APPLICATION
 
 if [ $APPLICATION = "mysql" ]
 then 
-    yum install mysql -y &>> $LOG
+    yum install mysql -y &>> $LOGS
     VALIDATE
 fi
 
 if [ $APPLICATION = "git" ]
 then 
-    yum install git -y &>> $LOG
+    yum install git -y &>> $LOGS
     VALIDATE
 fi
