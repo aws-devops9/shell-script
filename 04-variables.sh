@@ -3,7 +3,7 @@
 echo "This is a comversation between two friends"
 
 # We have to give arguments while running the shellscript 
-# Example : sh 04-variables.sh Robert John
+# Example : sh 04-variables.sh Robert John or Sumathi Prem etc.
 
 PERSON1=$1 # Here $1 value we are giving as Robert in command line while executing
 PERSON2=$2 # Here $2 value we are giving as Robert in command line while executing
