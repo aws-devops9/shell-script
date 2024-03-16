@@ -17,10 +17,10 @@ fi
 VALIDATE(){
 if [ $? -ne 0 ] #Here $? is used as Exit status
 then
-    echo " Installation of $APPLICATION is $R...FAILED $N"
+    echo -e " Installation of $APPLICATION is $R...FAILED $N"
     exit 1
 else
-    echo "Installation of $APPLICATION is $G...SUCCESSFUL $N"
+    echo -e "Installation of $APPLICATION is $G...SUCCESSFUL $N"
 fi
 }
 
