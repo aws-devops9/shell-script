@@ -7,10 +7,10 @@ ID=$(id -u) # Here id -u will give you root id number
 VALIDATE(){
 if [ $? -ne 0 ] #Here $? is used as Exit status
 then
-    echo " Installation is failed"
+    echo " Installation of $APPLICATION is failed"
     exit 1
 else
-    echo "Installation is successful."
+    echo "Installation of $APPLICATION is successful."
 fi
 }
 
@@ -22,11 +22,22 @@ else
     echo "You are a root user"
 fi
 
-yum install mysql -y
+echo "Please enter the Application you want to Install"
+read APPLICATION
 
-VALIDATE
+if [ $APPLICATION = "mysql" ]
+then 
+    yum install mysql -y
+    VALIDATE
+else
+    echo "Please enter the Application you want to Install"
+fi
 
-yum install git -y
-
-VALIDATE
+if [ $APPLICATION = "git" ]
+then 
+    yum install git -y
+    VALIDATE
+else 
+    echo "Please enter the Application you want to Install"
+fi
 
