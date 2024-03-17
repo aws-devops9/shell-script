@@ -8,7 +8,7 @@ G="\e[32m" # Green colour
 Y="\e[33m" # Yellow colour
 N="\e[0m" # No colour
 
-SOURCE_DIR="/tmp/shell-scipt-logs"
+SOURCE_DIR="/tmp/shell-script-logs"
 
 if [ ! -d $SOURCE_DIR ]
 then
