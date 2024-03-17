@@ -27,6 +27,7 @@ VALIDATE(){
         echo -e "$package installation is $R FAILED.$N"
     else
         echo -e "$package installation is $G SUCCESS.$N"
+    fi
 }
 
 
