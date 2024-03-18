@@ -28,7 +28,7 @@ done
 
 if [ -z "$NAME" ] || [ -z "$WISHES" ] # -z means if nothing given for Name and Wishes
 then
-    echo "$R ERROR $N: Both -n and -w are mandotory"
+    echo -e "$R ERROR $N: Both -n and -w are mandotory"
     USAGE
     exit 1
 fi 
