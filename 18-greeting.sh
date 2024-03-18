@@ -6,7 +6,7 @@ Y="\e[33m" # Yellow colour
 N="\e[0m" # No colour
 
 NAME=""
-WISH=""
+WISH="Good Morning" # bedefault we are hardcoding it, if user wants he can overwrite it while executing the script.
 
 USAGE(){
     echo "USAGE:: $(basename $0) -n <name> -w <wish>"
@@ -26,9 +26,10 @@ while getopts ":n:w:h" opt; do
     esac
 done
 
-if [ -z "$NAME" ] || [ -z "$WISHES" ] # -z means if nothing given for Name and Wishes
+#if [ -z "$NAME" ] || [ -z "$WISHES" ] # -z means if nothing given for Name and Wishes
+if [ -z "$NAME" ] # -z means if nothing given for Name
 then
-    echo -e "$R ERROR $N: Both -n and -w are mandotory"
+    echo -e "$R ERROR $N: -n is mandotory"
     USAGE
     exit 1
 fi 
