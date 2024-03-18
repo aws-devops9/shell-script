@@ -6,7 +6,7 @@ Y="\e[33m" # Yellow colour
 N="\e[0m" # No colour
 
 NAME=""
-WISH="Good Morning" # bedefault we are hardcoding it, if user wants he can overwrite it while executing the script.
+WISHES="Good Morning" # bedefault we are hardcoding it, if user wants he can overwrite it while executing the script.
 
 USAGE(){
     echo "USAGE:: $(basename $0) -n <name> -w <wish>"
